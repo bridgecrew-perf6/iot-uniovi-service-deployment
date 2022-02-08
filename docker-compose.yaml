@@ -30,7 +30,7 @@ services:
 
   backend:
     build:
-      context: ../iot-uniovi-service-api
+      context: ../iot-uniovi-service-backend
     depends_on:
       - database
     container_name: backend-iot    
