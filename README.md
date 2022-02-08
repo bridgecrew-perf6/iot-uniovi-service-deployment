@@ -26,7 +26,7 @@ docker-compose down
 docker-compose logs
 ```
 
-## Some PoC UIs
+## Some PoC IoT UIs
 
 - **Uniovi network** from [portainer](https://localhost:9443) we could check the uniovi network
 
