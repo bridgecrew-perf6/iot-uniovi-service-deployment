@@ -1,4 +1,49 @@
 # Description
 IoT Deployment Uniovi PoC
 
-![Uniovi net](captures/uniovi-net.png "Uniovi net")
+## Create and start service
+```shell
+docker-compose up -d
+```
+
+## Stop service
+```shell
+docker-compose stop
+```
+
+## Restart service
+```shell
+docker-compose start
+```
+
+## Remove service resources
+```shell
+docker-compose down
+```
+
+## Get service logs
+```shell
+docker-compose logs
+```
+
+## Some PoC UIs
+
+Uniovi network
+From [portainer](https://localhost:9443) we could check the uniovi network
+
+![Uniovi net](captures/iot_network.png "Uniovi net")
+
+API Explorer
+From [Loopback Explorer](http://localhost:3000/explorer) we could check the backend API
+
+![API Explorer](captures/api-explorer.png "API Explorer")
+
+node-RED Designer
+From [node-RED Designer](http://localhost:1880) we could check the iot flows:
+
+![node-RED Designer](captures/node-RED_designer.png "node-RED Designer")
+
+node-RED Dashboard
+From [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors graphs:
+
+![node-RED Dashboard](captures/node-RED_iot.png "node-RED IoT Dashboard")
