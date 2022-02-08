@@ -28,18 +28,18 @@ docker-compose logs
 
 ## Some PoC UIs
 
-- Uniovi network from [portainer](https://localhost:9443) we could check the uniovi network
+- **Uniovi network** from [portainer](https://localhost:9443) we could check the uniovi network
 
 ![Uniovi net](captures/iot_network.png "Uniovi net")
 
-- API Explorer from [Loopback Explorer](http://localhost:3000/explorer) we could check the backend API
+- **API Explorer** from [Loopback Explorer](http://localhost:3000/explorer) we could check the backend API
 
 ![API Explorer](captures/api-explorer.png "API Explorer")
 
-- node-RED Designer from [node-RED Designer](http://localhost:1880) we could check the iot flows:
+- **node-RED Designer** from [node-RED Designer](http://localhost:1880) we could check the iot flows:
 
 ![node-RED Designer](captures/node-RED_designer.png "node-RED Designer")
 
-- node-RED Dashboard from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors graphs:
+- **node-RED Dashboard** from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors graphs:
 
 ![node-RED Dashboard](captures/node-RED_iot.png "node-RED IoT Dashboard")
