@@ -43,6 +43,7 @@ services:
       - MONGODB_DB=iotdb
       - MONGODB_USER=admin
       - MONGODB_PASSWORD=uniovi
+      - WAIT_HOSTS=database-iot:27017
     networks:
       - network-name
 
