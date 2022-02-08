@@ -1,0 +1,9 @@
+/config-nodered/lib
+/config-nodered/node_modules
+/config-nodered/package.json
+/config-nodered/.sessions.json
+/config-nodered/.flows.json.backup
+/config-nodered/.config.runtime.json
+/config-nodered/.config.users.json
+/config-nodered/.config.users.json.backup
+/config-nodered/.config.nodes.json

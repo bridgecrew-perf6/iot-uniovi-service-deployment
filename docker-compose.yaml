@@ -1,0 +1,65 @@
+version: "3.7"
+
+services:
+  database:
+    image: mongo
+    container_name: database-iot
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=iotdb
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password      
+    volumes:
+      - ./config-database/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro      
+    networks:
+      - network-name
+
+  broker:
+    image: eclipse-mosquitto
+    container_name: broker-iot
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ./config-broker:/mosquitto/config
+      - ./data-broker:/mosquitto/data
+      - ./log-broker:/mosquitto/log
+    networks:
+      - network-name
+
+  backend:
+    build:
+      context: .
+      dockerfile: ../iot-uniovi-service-api/Dockerfile
+    container_name: backend-iot
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URL=mongo-iot
+      - MONGODB_PORT=27017
+      - MONGODB_DB=iotdb
+      - MONGODB_USER=admin
+      - MONGODB_PASSWORD=uniovi
+    networks:
+      - network-name
+
+  gateway:
+    build:
+      context: .
+      dockerfile: ../iot-uniovi-service-broker/Dockerfile
+    container_name: gateway-iot
+    ports:
+      - 1880:1880
+      - 1885:1885
+    environment:
+      - TZ=Europe/Madrid
+    volumes:
+      - ./config-gateway:/data
+    networks:
+      - network-name
+
+networks:
+    network-name:
+      name: uniovi
