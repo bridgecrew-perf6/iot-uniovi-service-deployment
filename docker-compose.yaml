@@ -62,6 +62,17 @@ services:
       - ./config-gateway:/data
     networks:
       - network-name
+      
+  frontend:
+    build:
+      context: ../iot-uniovi-service-frontend
+    depends_on:
+      - backend    
+    container_name: frontend-iot
+    ports:
+      - 4200:80
+    networks:
+      - network-name      
 
 networks:
     network-name:
