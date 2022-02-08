@@ -30,14 +30,15 @@ services:
 
   backend:
     build:
-      context: .
-      dockerfile: ../iot-uniovi-service-api/Dockerfile
-    container_name: backend-iot
+      context: ../iot-uniovi-service-api
+    depends_on:
+      - database
+    container_name: backend-iot    
     ports:
       - 3000:3000
     environment:
       - NODE_ENV=production
-      - MONGODB_URL=mongo-iot
+      - MONGODB_URL=database-iot
       - MONGODB_PORT=27017
       - MONGODB_DB=iotdb
       - MONGODB_USER=admin
@@ -47,8 +48,9 @@ services:
 
   gateway:
     build:
-      context: .
-      dockerfile: ../iot-uniovi-service-broker/Dockerfile
+      context: ../iot-uniovi-service-gateway
+    depends_on:
+      - backend      
     container_name: gateway-iot
     ports:
       - 1880:1880

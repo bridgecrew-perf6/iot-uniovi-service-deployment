@@ -1,5 +1,3 @@
-//db = db.getSiblingDB("admin");
-
 db.createUser({
     user: "admin",
     pwd: "uniovi",
@@ -10,7 +8,5 @@ db.createUser({
       }
     ]
   })
-
-//db = db.getSiblingDB("iotdb");
 
 db.createCollection("Measure")  

@@ -1,3 +1,5 @@
+/data-broker
+/log-broker
 /config-nodered/lib
 /config-nodered/node_modules
 /config-nodered/package.json
