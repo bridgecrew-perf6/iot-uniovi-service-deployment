@@ -1,6 +1,9 @@
 # Description
 IoT Deployment Uniovi PoC
 
+## IoT PoC Architecture
+![IoT Poc Architecture](captures/iot_architecture.drawio.png "IoT Poc Architecture")
+
 ## Create and start service
 ```shell
 docker-compose up -d
@@ -40,10 +43,10 @@ docker-compose logs
 
 ![node-RED Designer](captures/node-RED_designer.png "node-RED Designer")
 
-- **node-RED Dashboard** from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors graphs:
+- **node-RED Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors graphs:
  
 ![IoT Frontend Realtime](captures/iot_ui_RT.png "IoT Frontend Realtime")
 
-- **node-RED Dashboard** from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors historic:
+- **node-RED Dashboard** from [IoT Dashboard](http://localhost:4200) we could check the iot sensors historic:
  
 ![IoT Frontend Historic](captures/iot_ui_historic.png "IoT Frontend Historic")
