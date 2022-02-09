@@ -41,5 +41,9 @@ docker-compose logs
 ![node-RED Designer](captures/node-RED_designer.png "node-RED Designer")
 
 - **node-RED Dashboard** from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors graphs:
+ 
+![IoT Frontend Realtime](captures/iot_ui_RT.png "IoT Frontend Realtime")
 
-![node-RED Dashboard](captures/node-RED_iot.png "node-RED IoT Dashboard")
+- **node-RED Dashboard** from [IoT Dashboard](http://localhost:1880/ui) we could check the iot sensors historic:
+ 
+![IoT Frontend Historic](captures/iot_ui_historic.png "IoT Frontend Historic")
