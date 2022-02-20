@@ -9,3 +9,4 @@
 /config-nodered/.config.users.json
 /config-nodered/.config.users.json.backup
 /config-nodered/.config.nodes.json
+/config-gateway/.sessions.json
